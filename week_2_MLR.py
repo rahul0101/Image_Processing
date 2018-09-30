@@ -27,8 +27,8 @@ def gradientDescent(X , y, theta, alpha, iters):
 
 
 def computeCost(X, y, theta):
-    h = np.dot(X,theta) - y
-    diff = np.power(h,2)
+    h = np.dot(X,theta)
+    diff = np.power(h-y,2)
     sum = np.sum(diff)
     J = sum/(2*m)
     return J
