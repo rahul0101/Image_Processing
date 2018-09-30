@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 df = pd.read_csv('ex1data2.txt', delimiter=',', names=('Size','Bedrooms','Price'))
 w = df.ix[:,0:2]
