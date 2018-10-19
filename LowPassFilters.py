@@ -13,9 +13,11 @@ gaussian = cv2.GaussianBlur(img, (37, 37), 0)
 
 median = cv2.medianBlur(img, 3)
 
-outputs = [img, box, blur, gaussian, median]
+bil = cv2.bilateralFilter(img, 9, 15, 80, 80)
 
-for i in range(5):
+outputs = [img, box, blur, gaussian, median, bil]
+
+for i in range(6):
     plt.subplot(3, 2, i + 1)
     plt.imshow(outputs[i])
 plt.show()
